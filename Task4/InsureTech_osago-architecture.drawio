@@ -1,0 +1,466 @@
+<mxfile host="65bd71144e">
+    <diagram name="OSAGO TO-BE Task4" id="InsureTech-Task4-OSAGO">
+        <mxGraphModel dx="1252" dy="1001" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2800" pageHeight="2200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+
+                <!-- TITLE -->
+                <mxCell id="title" value="InsureTech — Контейнерная диаграмма TO-BE: ОСАГО онлайн (Task 4)" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="20" width="2400" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="Добавлен osago-aggregator: параллельный опрос всех СК, результаты стримятся клиенту через SSE. Multi-instance core-app — через Redis Pub/Sub фанаут." style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fillColor=none;strokeColor=none;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="55" width="2400" height="25" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== USERS ==================== -->
+                <mxCell id="users_box" value="Пользователи (Клиенты InsureTech)" style="html=1;strokeColor=#999999;fillColor=#e3ebff;verticalAlign=top;fontSize=11;fontStyle=1;padding=8;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="100" width="430" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="user1" value="Клиент&#xa;(браузер)" style="shape=mxgraph.archimate3.actor;fillColor=#5282FF;strokeColor=none;fontColor=white;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="115" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="user2" value="Агент&#xa;(браузер)" style="shape=mxgraph.archimate3.actor;fillColor=#5282FF;strokeColor=none;fontColor=white;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="115" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="user3" value="Менеджер&#xa;(браузер)" style="shape=mxgraph.archimate3.actor;fillColor=#5282FF;strokeColor=none;fontColor=white;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="115" width="50" height="50" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== EXTERNAL: INSURANCE COMPANIES ==================== -->
+                <mxCell id="ic_box" value="Страховые компании (внешние системы, 10 шт.)" style="html=1;strokeColor=#cc6600;fillColor=#fff3e0;verticalAlign=top;fontSize=11;fontStyle=1;padding=8;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="2080" y="380" width="560" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic1" value="СК 1" style="rounded=1;fillColor=#ff9900;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2100" y="430" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic2" value="СК 2" style="rounded=1;fillColor=#ff9900;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2195" y="430" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic3" value="СК 3" style="rounded=1;fillColor=#ff9900;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2290" y="430" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic4" value="СК 4" style="rounded=1;fillColor=#ff9900;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2385" y="430" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic5" value="СК 5" style="rounded=1;fillColor=#ff9900;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2490" y="430" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic6" value="СК 6" style="rounded=1;fillColor=#e67300;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2100" y="488" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic7" value="СК 7" style="rounded=1;fillColor=#e67300;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2195" y="488" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic8" value="СК 8" style="rounded=1;fillColor=#e67300;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2290" y="488" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic9" value="СК 9" style="rounded=1;fillColor=#e67300;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2385" y="488" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic10" value="СК 10" style="rounded=1;fillColor=#e67300;strokeColor=#cc6600;fontColor=white;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2490" y="488" width="75" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic_api_note" value="Единый REST API для всех СК (оба агрегатора):&#xa;POST /applications — создать заявку&#xa;GET /applications/{id}/quote — получить предложение по ОСАГО&#xa;GET /products, GET /tariffs — тарифы и продукты (ins-product-aggregator)" style="text;html=1;align=left;fontSize=9;fillColor=#fff3e0;strokeColor=#cc6600;spacingLeft=5;" parent="1" vertex="1">
+                    <mxGeometry x="2100" y="548" width="510" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic_note_products" value="ins-product-aggregator → СК&#xa;(фоновый опрос тарифов, [CB] per СК)" style="text;html=1;align=center;fontSize=9;fillColor=#e3f2fd;strokeColor=#1565c0;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="2100" y="640" width="510" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="ic_note_osago" value="osago-aggregator → СК&#xa;(ОСАГО заявки, [CB]+[Timeout: 60с]+[Retry] per СК)" style="text;html=1;align=center;fontSize=9;fillColor=#E0F2F1;strokeColor=#00695C;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="2100" y="700" width="510" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== SYSTEM BOUNDARY ==================== -->
+                <mxCell id="system_boundary" value="InsureTech — Система (Kubernetes кластер)" style="html=1;strokeColor=#5282FF;fillColor=#f0f4ff;verticalAlign=top;fontSize=12;fontStyle=1;padding=10;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="220" width="1840" height="1560" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== API GATEWAY ==================== -->
+                <mxCell id="api_gw" value="API Gateway / Nginx Ingress&#xa;&#xa;Маршрутизация HTTP REST-запросов&#xa;и SSE-соединений к core-app" style="rounded=1;fillColor=#5282FF;strokeColor=#3a60cc;fontColor=white;fontSize=10;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="275" width="240" height="80" as="geometry"/>
+                </mxCell>
+
+                <!-- Rate Limiting badge -->
+                <mxCell id="badge_rl" value="Rate Limiting&#xa;(пик: 2 500 польз.)" style="rounded=1;fillColor=#FF8F00;strokeColor=#E65100;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="608" y="278" width="150" height="44" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== CORE-APP CONTAINER ==================== -->
+                <mxCell id="core_app_box" value="core-app (контейнер)" style="html=1;strokeColor=#2e7d32;fillColor=#e8f5e9;verticalAlign=top;fontSize=11;fontStyle=1;padding=8;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="425" width="620" height="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="core_app_svc" value="core-app&#xa;(Spring Boot / Node.js)&#xa;&#xa;• Оформление страховок&#xa;• Продукты, тарифы&#xa;• Приём заявок на ОСАГО&#xa;• POST → osago-aggregator&#xa;• Kafka consumer: osago.quotes&#xa;• Pub→ Redis Pub/Sub по app_id&#xa;• SSE-стрим предложений клиенту&#xa;• Outbox → PolicyIssued в Kafka" style="rounded=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=white;fontSize=10;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="465" width="240" height="270" as="geometry"/>
+                </mxCell>
+
+                <!-- Redis Pub/Sub inside core-app -->
+                <mxCell id="redis_pubsub" value="Redis Pub/Sub&#xa;&#xa;Канал: osago-quotes:{app_id}&#xa;&#xa;Фанаут quote-событий между&#xa;инстансами core-app:&#xa;любой pod получает из Kafka&#xa;→ публикует в Redis&#xa;→ pod с SSE-соединением&#xa;  отправляет клиенту" style="shape=cylinder3;fillColor=#ffccbc;strokeColor=#bf360c;fontSize=9;verticalAlign=bottom;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="460" width="310" height="180" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="outbox_table" value="Outbox-таблица&#xa;(PostgreSQL)&#xa;&#xa;[Transactional Outbox]&#xa;policy_events: id, type,&#xa;payload, published_at&#xa;Запись атомарна с основной&#xa;транзакцией" style="shape=table;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=9;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="765" width="230" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="core_db" value="PostgreSQL&#xa;(core-app DB)&#xa;Страховки, клиенты,&#xa;реплика продуктов,&#xa;заявки ОСАГО" style="shape=cylinder3;fillColor=#a5d6a7;strokeColor=#2e7d32;fontSize=9;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="760" width="160" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="outbox_relay" value="Outbox Relay&#xa;(CDC/Debezium)&#xa;&#xa;→ Kafka: policies.issued" style="rounded=1;fillColor=#81c784;strokeColor=#2e7d32;fontSize=9;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="660" width="140" height="80" as="geometry"/>
+                </mxCell>
+
+                <!-- Multi-instance note -->
+                <mxCell id="multiinstance_note" value="⬡  Несколько инстансов core-app (K8s HPA): Redis Pub/Sub решает проблему SSE-фанаута — sticky sessions не нужны" style="text;html=1;align=left;fontSize=9;fillColor=#f1f8e9;strokeColor=#558b2f;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="893" width="610" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== KAFKA ==================== -->
+                <mxCell id="kafka_box" value="Apache Kafka (Message Broker)" style="html=1;strokeColor=#b71c1c;fillColor=#ffebee;verticalAlign=top;fontSize=11;fontStyle=1;padding=8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="380" width="1110" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="kafka_icon" value="Kafka" style="shape=mxgraph.logos.kafka;fillColor=#b71c1c;strokeColor=none;fontSize=10;fontColor=#b71c1c;verticalLabelPosition=bottom;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="398" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="topic_products" value="Топик: products.updated&#xa;&#xa;Событие: ProductUpdated&#xa;{ company_id, product_id,&#xa;  tariff, effective_from }&#xa;&#xa;Retention: 7 дней&#xa;Partitions: по company_id&#xa;&#xa;Producer: ins-product-aggregator&#xa;Consumers: core-app,&#xa;           ins-comp-settlement" style="rounded=1;fillColor=#ef9a9a;strokeColor=#b71c1c;fontSize=9;verticalAlign=top;align=left;spacingLeft=6;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="393" width="270" height="196" as="geometry"/>
+                </mxCell>
+                <mxCell id="topic_policies" value="Топик: policies.issued&#xa;&#xa;Событие: PolicyIssued&#xa;{ policy_id, client_id,&#xa;  product_id, company_id,&#xa;  amount, issued_at }&#xa;&#xa;Retention: 30 дней&#xa;Partitions: по date&#xa;&#xa;Producer: core-app (Outbox)&#xa;Consumer: ins-comp-settlement" style="rounded=1;fillColor=#ef9a9a;strokeColor=#b71c1c;fontSize=9;verticalAlign=top;align=left;spacingLeft=6;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="393" width="270" height="196" as="geometry"/>
+                </mxCell>
+                <!-- NEW Kafka topic -->
+                <mxCell id="topic_osago" value="★ Топик: osago.quotes (NEW)&#xa;&#xa;Событие: OsagoQuoteReceived&#xa;{ application_id, company_id,&#xa;  premium, conditions,&#xa;  received_at, status }&#xa;&#xa;Retention: 1 час&#xa;Partitions: по application_id&#xa;&#xa;Producer: osago-aggregator&#xa;Consumer: core-app" style="rounded=1;fillColor=#ffcdd2;strokeColor=#c62828;fontSize=9;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1550" y="393" width="400" height="196" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== INS-PRODUCT-AGGREGATOR ==================== -->
+                <mxCell id="agg_box" value="ins-product-aggregator (контейнер)" style="html=1;strokeColor=#1565c0;fillColor=#e3f2fd;verticalAlign=top;fontSize=11;fontStyle=1;padding=8;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="745" width="510" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="agg_svc" value="ins-product-aggregator&#xa;(фоновый сервис)&#xa;&#xa;• Периодически опрашивает&#xa;  каждую СК в фоне&#xa;• При изменении тарифов&#xa;  публикует ProductUpdated&#xa;• Circuit Breaker на каждую СК" style="rounded=1;fillColor=#1976d2;strokeColor=#1565c0;fontColor=white;fontSize=10;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="785" width="270" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="agg_cache" value="Redis / in-memory&#xa;&#xa;Снимок данных&#xa;по каждой СК" style="shape=cylinder3;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=9;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="800" width="170" height="100" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== INS-COMP-SETTLEMENT ==================== -->
+                <mxCell id="settlement_box" value="ins-comp-settlement (контейнер)" style="html=1;strokeColor=#6a1b9a;fillColor=#f3e5f5;verticalAlign=top;fontSize=11;fontStyle=1;padding=8;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="990" width="600" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="settlement_svc" value="ins-comp-settlement&#xa;(Spring Boot / сервис расчётов)&#xa;&#xa;• Подписан на products.updated&#xa;  — обновляет реплику продуктов&#xa;• Подписан на policies.issued&#xa;  — накапливает реестр полисов&#xa;• Нет ночного батч-запроса" style="rounded=1;fillColor=#8e24aa;strokeColor=#6a1b9a;fontColor=white;fontSize=10;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="1030" width="280" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="settlement_db" value="PostgreSQL&#xa;(settlement DB)&#xa;Реестр полисов,&#xa;реплика продуктов" style="shape=cylinder3;fillColor=#ce93d8;strokeColor=#6a1b9a;fontSize=9;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="1060" width="150" height="100" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== OSAGO-AGGREGATOR (NEW) ==================== -->
+                <mxCell id="osago_box" value="★ osago-aggregator (NEW, контейнер)" style="html=1;strokeColor=#00695C;fillColor=#E0F2F1;verticalAlign=top;fontSize=11;fontStyle=1;padding=8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="1080" width="680" height="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="osago_svc" value="osago-aggregator&#xa;(Spring Boot / сервис)&#xa;&#xa;API для core-app:&#xa;  POST /osago/applications&#xa;  → { application_id } (быстро)&#xa;&#xa;Логика:&#xa;• Параллельно POST /applications&#xa;  в каждую СК&#xa;• Сохраняет IC-app-id[] в Redis&#xa;  (TTL 75 сек)&#xa;• Polling: GET /applications/{id}/quote&#xa;  каждую СК до ответа или таймаута&#xa;• Получил ответ → публикует&#xa;  OsagoQuoteReceived в Kafka&#xa;• После 60 с → публикует&#xa;  Timeout-событие для оставших СК" style="rounded=1;fillColor=#00897B;strokeColor=#00695C;fontColor=white;fontSize=10;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="1120" width="330" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="osago_redis" value="Redis&#xa;(osago state store)&#xa;&#xa;In-flight заявки:&#xa;{ application_id,&#xa;  ic_app_ids: { СК→id },&#xa;  status_per_ic: map,&#xa;  created_at }&#xa;TTL: 75 сек&#xa;&#xa;Stateless scale-out:&#xa;хранилище обязательно&#xa;для multi-instance" style="shape=cylinder3;fillColor=#80CBC4;strokeColor=#00695C;fontSize=9;verticalAlign=bottom;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1270" y="1120" width="260" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="osago_scale_note" value="⬡  Несколько инстансов osago-aggregator (K8s): состояние in-flight в Redis → инстансы stateless" style="text;html=1;align=left;fontSize=9;fillColor=#E0F2F1;strokeColor=#00695C;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="1538" width="640" height="32" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== RESILIENCE PATTERN BADGES ==================== -->
+
+                <!-- CB badge for ins-product-aggregator → IC -->
+                <mxCell id="badge_cb_agg" value="Circuit Breaker (per СК)" style="rounded=1;fillColor=#C62828;strokeColor=#7f0000;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1600" y="850" width="180" height="30" as="geometry"/>
+                </mxCell>
+
+                <!-- Badges for osago-aggregator → IC -->
+                <mxCell id="badge_cb_osago" value="Circuit Breaker (per СК)" style="rounded=1;fillColor=#C62828;strokeColor=#7f0000;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1600" y="1290" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="badge_timeout_osago" value="Timeout: 60 сек (per СК)" style="rounded=1;fillColor=#37474F;strokeColor=#263238;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1600" y="1332" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="badge_retry_osago" value="Retry (poll до ответа/таймаута)" style="rounded=1;fillColor=#2E7D32;strokeColor=#1b5e20;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1600" y="1374" width="200" height="30" as="geometry"/>
+                </mxCell>
+
+                <!-- Timeout badge on core-app → osago-aggregator REST -->
+                <mxCell id="badge_timeout_core_osago" value="Timeout: 5 сек" style="rounded=1;fillColor=#37474F;strokeColor=#263238;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="1050" width="120" height="28" as="geometry"/>
+                </mxCell>
+
+                <!-- SSE label badge -->
+                <mxCell id="badge_sse" value="SSE (Server-Sent Events)&#xa;новый тип интеграции" style="rounded=1;fillColor=#00695C;strokeColor=#004D40;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="165" y="240" width="190" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== EDGES ==================== -->
+
+                <!-- 1. Users → API Gateway: REST -->
+                <mxCell id="e_user_gw_rest" value="HTTPS / REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#5282FF;strokeWidth=2;fontSize=9;" parent="1" source="users_box" target="api_gw" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- 2. Users ↔ API Gateway: SSE (new, teal dashed) -->
+                <mxCell id="e_user_gw_sse" value="SSE: GET /osago/{id}/quotes&#xa;(клиент открывает→сервер стримит)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#00897B;strokeWidth=2;fontSize=9;dashed=1;startArrow=block;startFill=0;endArrow=block;endFill=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="140"/>
+                            <mxPoint x="160" y="315"/>
+                            <mxPoint x="340" y="315"/>
+                        </Array>
+                        <mxPoint x="200" y="140" as="sourcePoint"/>
+                        <mxPoint x="340" y="315" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 3. API Gateway → core-app: REST -->
+                <mxCell id="e_gw_core_rest" value="HTTP / REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#5282FF;strokeWidth=2;fontSize=9;" parent="1" source="api_gw" target="core_app_svc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- 4. API Gateway → core-app: SSE relay (teal dashed) -->
+                <mxCell id="e_gw_core_sse" value="SSE relay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#00897B;strokeWidth=2;fontSize=9;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="api_gw" target="core_app_svc" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="220" y="315"/>
+                            <mxPoint x="220" y="465"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 5. core-app → core_db -->
+                <mxCell id="e_core_db" value="SQL (JDBC)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2e7d32;fontSize=9;" parent="1" source="core_app_svc" target="core_db" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- 6. core-app → outbox_table (atomic write) -->
+                <mxCell id="e_core_outbox" value="атомарная запись" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2e7d32;fontSize=9;dashed=1;" parent="1" source="core_app_svc" target="outbox_table" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- 7. outbox_relay reads outbox_table -->
+                <mxCell id="e_relay_outbox" value="читает" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2e7d32;fontSize=9;" parent="1" source="outbox_relay" target="outbox_table" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="760" y="820"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 8. outbox_relay → topic_policies (Kafka) -->
+                <mxCell id="e_relay_kafka" value="publish PolicyIssued" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#b71c1c;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="outbox_relay" target="topic_policies" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="760" y="380"/>
+                            <mxPoint x="1395" y="380"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 9. topic_products → core-app (Kafka subscribe) -->
+                <mxCell id="e_kafka_core_products" value="subscribe ProductUpdated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#b71c1c;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="topic_products" target="core_app_svc" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1105" y="350"/>
+                            <mxPoint x="370" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 10. agg_svc → topic_products (Kafka publish) -->
+                <mxCell id="e_agg_kafka" value="publish ProductUpdated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#b71c1c;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="agg_svc" target="topic_products" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1045" y="740"/>
+                            <mxPoint x="1105" y="740"/>
+                            <mxPoint x="1105" y="589"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 11. topic_products → settlement_svc (Kafka subscribe) -->
+                <mxCell id="e_kafka_settlement_products" value="subscribe ProductUpdated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#b71c1c;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="topic_products" target="settlement_svc" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="870" y="590"/>
+                            <mxPoint x="870" y="1140"/>
+                            <mxPoint x="530" y="1140"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 12. topic_policies → settlement_svc (Kafka subscribe) -->
+                <mxCell id="e_kafka_settlement_policies" value="subscribe PolicyIssued" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#b71c1c;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="topic_policies" target="settlement_svc" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1395" y="1200"/>
+                            <mxPoint x="530" y="1200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 13. settlement_svc → settlement_db -->
+                <mxCell id="e_settlement_db" value="SQL (JDBC)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#6a1b9a;fontSize=9;" parent="1" source="settlement_svc" target="settlement_db" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- 14. agg_svc → IC box (products polling, orange) -->
+                <mxCell id="e_agg_ic" value="REST: GET тарифы/продукты&#xa;(фоновый, [CB] per СК)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#cc6600;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="agg_svc" target="ic_box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1850" y="890"/>
+                            <mxPoint x="2080" y="890"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 15. core-app → osago-aggregator (REST, NEW) -->
+                <mxCell id="e_core_osago_rest" value="REST POST /osago/applications&#xa;→ {application_id}  [Timeout: 5с]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#00897B;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="core_app_svc" target="osago_svc" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="490" y="700"/>
+                            <mxPoint x="490" y="1080"/>
+                            <mxPoint x="860" y="1080"/>
+                            <mxPoint x="860" y="1320"/>
+                            <mxPoint x="910" y="1320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 16. osago_svc → topic_osago (Kafka publish, NEW) -->
+                <mxCell id="e_osago_kafka" value="publish OsagoQuoteReceived&#xa;(по мере поступления ответов СК)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#b71c1c;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="osago_svc" target="topic_osago" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1075" y="1080"/>
+                            <mxPoint x="1750" y="1080"/>
+                            <mxPoint x="1750" y="589"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 17. topic_osago → core-app (Kafka subscribe, NEW) -->
+                <mxCell id="e_kafka_core_osago" value="subscribe OsagoQuoteReceived" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#b71c1c;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="topic_osago" target="core_app_svc" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1550" y="330"/>
+                            <mxPoint x="370" y="330"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 18. core-app → Redis Pub/Sub (internal fanout) -->
+                <mxCell id="e_core_redis_ps" value="publish to&#xa;channel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#bf360c;strokeWidth=1;fontSize=9;dashed=1;" parent="1" source="core_app_svc" target="redis_pubsub" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- 19. osago_svc → osago_redis (state R/W) -->
+                <mxCell id="e_osago_redis" value="R/W state&#xa;(application_id,&#xa; IC app IDs, TTL)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#00695C;fontSize=9;" parent="1" source="osago_svc" target="osago_redis" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- 20. osago_svc → IC box (OSAGO polling, orange, NEW) -->
+                <mxCell id="e_osago_ic" value="REST: POST /applications (параллельно)&#xa;REST: GET /applications/{id}/quote (polling)&#xa;[CB per СК] [Timeout: 60с] [Retry]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#cc6600;strokeWidth=2;fontSize=9;fontStyle=1;" parent="1" source="osago_svc" target="ic_box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1850" y="1320"/>
+                            <mxPoint x="2080" y="1320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ==================== ELIMINATED INTERACTIONS ==================== -->
+                <mxCell id="eliminated_box" value="УСТРАНЁННЫЕ ВЗАИМОДЕЙСТВИЯ (было в AS-IS)" style="html=1;strokeColor=#cc0000;fillColor=#ffe6e6;verticalAlign=top;fontSize=10;fontStyle=1;dashed=1;padding=8;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="1830" width="1800" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="elim1" value="✗  core-app → ins-product-aggregator: GET /products каждые 15 мин&#xa;   ЗАМЕНЕНО: подписка на Kafka-топик products.updated" style="text;html=1;align=left;fontSize=10;fillColor=#ffcccc;strokeColor=#cc0000;rounded=1;spacingLeft=5;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="1865" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="elim2" value="✗  ins-comp-settlement → ins-product-aggregator: GET /products раз в сутки&#xa;   ЗАМЕНЕНО: подписка на Kafka-топик products.updated&#xa;&#xa;✗  ins-comp-settlement → core-app: GET /policies раз в сутки (ночной батч)&#xa;   ЗАМЕНЕНО: подписка на Kafka-топик policies.issued" style="text;html=1;align=left;fontSize=10;fillColor=#ffcccc;strokeColor=#cc0000;rounded=1;spacingLeft=5;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="1865" width="1170" height="90" as="geometry"/>
+                </mxCell>
+
+                <!-- ==================== LEGEND ==================== -->
+                <mxCell id="legend_box" value="Легенда" style="html=1;strokeColor=#666666;fillColor=#f5f5f5;verticalAlign=top;fontSize=10;fontStyle=1;padding=8;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="2010" width="1800" height="150" as="geometry"/>
+                </mxCell>
+
+                <!-- Legend: REST -->
+                <mxCell id="leg1_s" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg1_e" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg1" value="" style="edgeStyle=none;rounded=0;strokeColor=#5282FF;strokeWidth=2;endArrow=block;endFill=1;" parent="1" source="leg1_s" target="leg1_e" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg1_lbl" value="Синхронный REST (HTTP)" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="2045" width="230" height="25" as="geometry"/>
+                </mxCell>
+
+                <!-- Legend: SSE -->
+                <mxCell id="leg_sse_s" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_sse_e" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_sse" value="" style="edgeStyle=none;rounded=0;strokeColor=#00897B;strokeWidth=2;dashed=1;startArrow=block;startFill=0;endArrow=block;endFill=1;" parent="1" source="leg_sse_s" target="leg_sse_e" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_sse_lbl" value="SSE / Server-Sent Events (новая стрелка)" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="2045" width="290" height="25" as="geometry"/>
+                </mxCell>
+
+                <!-- Legend: Kafka -->
+                <mxCell id="leg2_s" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="990" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg2_e" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg2" value="" style="edgeStyle=none;rounded=0;strokeColor=#b71c1c;strokeWidth=2;endArrow=block;endFill=1;" parent="1" source="leg2_s" target="leg2_e" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg2_lbl" value="Event Streaming — Kafka (publish/subscribe)" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="2045" width="310" height="25" as="geometry"/>
+                </mxCell>
+
+                <!-- Legend: External IC REST -->
+                <mxCell id="leg3_s" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1430" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg3_e" value="" style="point;x=0;y=0;width=10;height=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="2055" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg3" value="" style="edgeStyle=none;rounded=0;strokeColor=#cc6600;strokeWidth=2;endArrow=block;endFill=1;" parent="1" source="leg3_s" target="leg3_e" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg3_lbl" value="Внешний REST к СК (фоновый, с паттернами)" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1520" y="2045" width="320" height="25" as="geometry"/>
+                </mxCell>
+
+                <!-- Legend: Resilience patterns row -->
+                <mxCell id="leg_rl" value="Rate Limiting" style="rounded=1;fillColor=#FF8F00;strokeColor=#E65100;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="2095" width="120" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_cb" value="Circuit Breaker" style="rounded=1;fillColor=#C62828;strokeColor=#7f0000;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="2095" width="120" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_to" value="Timeout" style="rounded=1;fillColor=#37474F;strokeColor=#263238;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="2095" width="120" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_re" value="Retry" style="rounded=1;fillColor=#2E7D32;strokeColor=#1b5e20;fontColor=white;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="2095" width="120" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_patterns_note" value="Паттерны отказоустойчивости: [RL] — на уровне API Gateway; [CB]+[Timeout]+[Retry] — в агрегаторах на каждый вызов к СК; [Timeout] — на REST-вызове core-app → osago-aggregator" style="text;html=1;fontSize=9;align=left;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="2095" width="1200" height="26" as="geometry"/>
+                </mxCell>
+
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
