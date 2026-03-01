@@ -1,0 +1,97 @@
+# GraphQL-схема сервиса client-info
+#
+# Эквивалент REST API:
+#   GET /clients/{id}              → query client(id)           { id name age }
+#   GET /clients/{id}/documents    → query client(id)           { documents { ... } }
+#   GET /clients/{id}/relatives    → query client(id)           { relatives { ... } }
+#
+# Потребитель запрашивает ровно те поля, которые ему нужны —
+# один запрос может заменить 1–3 отдельных вызова REST.
+
+# ─────────────────────────────────────────────
+# Типы
+# ─────────────────────────────────────────────
+
+"""Клиент страховой компании."""
+type Client {
+  """Уникальный идентификатор клиента."""
+  id: ID!
+
+  """Полное имя клиента."""
+  name: String
+
+  """Возраст клиента."""
+  age: Int
+
+  """Список документов клиента."""
+  documents: [Document!]
+
+  """Список родственников клиента."""
+  relatives: [Relative!]
+}
+
+"""Документ, удостоверяющий личность или подтверждающий статус клиента."""
+type Document {
+  """Уникальный идентификатор документа."""
+  id: ID!
+
+  """Тип документа (например: passport, driver_license, snils)."""
+  type: String
+
+  """Номер документа."""
+  number: String
+
+  """Дата выдачи документа (ISO 8601)."""
+  issueDate: String
+
+  """Дата окончания срока действия документа (ISO 8601)."""
+  expiryDate: String
+}
+
+"""Родственник клиента."""
+type Relative {
+  """Уникальный идентификатор записи о родственнике."""
+  id: ID!
+
+  """Тип родства (например: spouse, child, parent)."""
+  relationType: String
+
+  """Полное имя родственника."""
+  name: String
+
+  """Возраст родственника."""
+  age: Int
+}
+
+# ─────────────────────────────────────────────
+# Запросы
+# ─────────────────────────────────────────────
+
+type Query {
+  """
+  Возвращает клиента по идентификатору.
+
+  Потребитель указывает только нужные поля — один запрос заменяет
+  любую комбинацию вызовов GET /clients/{id}, /documents, /relatives.
+
+  Примеры:
+    # только базовые данные (≡ GET /clients/{id})
+    query { client(id: "42") { id name age } }
+
+    # клиент + документы (≡ GET /clients/{id} + GET /clients/{id}/documents)
+    query { client(id: "42") { name documents { type number expiryDate } } }
+
+    # всё сразу (≡ три REST-вызова в одном запросе)
+    query {
+      client(id: "42") {
+        id name age
+        documents { id type number issueDate expiryDate }
+        relatives { id relationType name age }
+      }
+    }
+  """
+  client(
+    """Идентификатор клиента."""
+    id: ID!
+  ): Client
+}

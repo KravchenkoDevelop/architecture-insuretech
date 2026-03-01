@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git reset --hard c80ebe4)",
+      "Read(//d//**)",
+      "Bash(echo $PATH)",
+      "Bash(uv run --with pytest --with pyyaml --with pytest-cov pytest -v)",
+      "Bash(docker --version)",
+      "Bash(docker info --format '{{.ServerVersion}}')",
+      "Bash(docker context ls)",
+      "Bash(docker context use default)",
+      "Read(//c/Program Files/Docker/Docker//**)",
+      "Bash(docker build -f Dockerfile.test -t task2-tests:latest .)",
+      "Bash(docker run --rm -it --name task2-tests task2-tests:latest pytest -v --color=yes -p rich --tb=short)",
+      "Bash(winpty docker run --rm -t --name task2-tests task2-tests:latest pytest -v --color=yes -p rich --tb=short)",
+      "Bash(docker run --rm -e TERM=xterm-256color --name task2-tests task2-tests:latest pytest -v --color=yes --tb=short)",
+      "Bash(minikube delete)",
+      "Bash(minikube start --driver=docker --kubernetes-version=v1.31.0 --memory=4096 --cpus=2)",
+      "Bash(minikube addons enable metrics-server)",
+      "Bash(kubectl apply -f deployment.yaml -f service.yaml -f hpa.yaml)",
+      "Bash(kubectl rollout status deployment/insuretech-app --timeout=120s)"
+    ]
+  }
+}
