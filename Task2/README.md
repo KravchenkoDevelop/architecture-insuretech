@@ -74,6 +74,37 @@ kubectl get pods --watch
 # Дашборд Minikube
 minikube dashboard
 ```
+![alt text](image.png)
+![alt text](image-1.png)
+
+---
+
+## Тесты
+
+### Unit-тесты (статическая валидация манифестов)
+
+Проверяют корректность YAML-манифестов и сценария Locust без запущенного кластера.
+
+```bash
+cd Task2
+uv run --with pytest --with pyyaml --with pytest-cov pytest -v --color=yes
+```
+
+📄 [Лог запуска unit-тестов](tests/run-20260301_192613.log)
+
+### Интеграционные тесты (живой Minikube)
+
+Проверяют реальное состояние кластера: ноды, поды, HPA, метрики.
+
+```bash
+bash run_integration_tests.sh --skip-scaling
+```
+
+📄 [Лог запуска интеграционных тестов](tests/integration-run-20260301_212536.log)
+
+### Общий лог pytest (последний запуск)
+
+📄 [tests/test-results.log](tests/test-results.log)
 
 ---
 

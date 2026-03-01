@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: insuretech-app
-          # Образ тестового приложения из задания (порт 8080, GET /, GET /metrics)
-          image: dnit13/docker-for-k8s-hpa:latest
+          # Официальный k8s-образ для тестирования HPA (порт 8080, GET /, POST /ConsumeMem)
+          image: registry.k8s.io/e2e-test-images/resource-consumer:1.13
           ports:
             - containerPort: 8080
           resources:

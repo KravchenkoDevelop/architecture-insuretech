@@ -1,0 +1,44 @@
+[1m============================= test session starts =============================[0m
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TTA\AppData\Local\uv\cache\builds-v0\.tmpffw9Y1\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Repos\architecture-insuretech\Task2
+configfile: pytest.ini
+plugins: cov-7.0.0
+[1mcollecting ... [0mcollected 37 items / 3 deselected / 34 selected
+
+tests/integration/test_minikube.py::TestMinikubeCluster::test_minikube_is_running [32mPASSED[0m
+tests/integration/test_minikube.py::TestMinikubeCluster::test_kubectl_can_connect [32mPASSED[0m
+tests/integration/test_minikube.py::TestMinikubeCluster::test_metrics_server_addon_enabled [32mPASSED[0m
+tests/integration/test_minikube.py::TestMinikubeCluster::test_nodes_are_ready [32mPASSED[0m
+tests/integration/test_minikube.py::TestMinikubeCluster::test_metrics_server_pod_running [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_exists [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_targets_correct_deployment [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_min_replicas [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_max_replicas [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_current_replicas_at_least_min [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_has_memory_metric [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_conditions_not_false [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_metrics_server_provides_data [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPALive::test_hpa_current_memory_utilization_reported [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPAWatch::test_hpa_stable_at_min_replicas_without_load [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPAWatch::test_kubectl_get_hpa_output_parseable [32mPASSED[0m
+tests/integration/test_hpa_live.py::TestHPAWatch::test_kubectl_get_pods_output_parseable [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_all_pods_running [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_no_pods_in_crashloop [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_no_oomkilled_pods [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_pod_names_contain_app_name [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_pods_have_correct_labels [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_pods_have_resource_limits [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_pod_count_within_hpa_bounds [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_pod_status_snapshot [32mPASSED[0m
+tests/integration/test_pod_watch.py::TestPodWatch::test_hpa_status_snapshot [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestDeploymentLive::test_deployment_exists [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestDeploymentLive::test_deployment_available_replicas [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestDeploymentLive::test_pods_are_running [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestDeploymentLive::test_pods_containers_ready [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestDeploymentLive::test_pod_restart_count_is_low [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestDeploymentLive::test_wait_for_deployment_ready [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestServiceLive::test_service_exists [32mPASSED[0m
+tests/integration/test_deployment_live.py::TestServiceLive::test_service_has_endpoints [32mPASSED[0m
+
+[32m====================== [32m[1m34 passed[0m, [33m3 deselected[0m[32m in 38.49s[0m[32m ======================[0m

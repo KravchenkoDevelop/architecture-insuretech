@@ -1,0 +1,14 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install test dependencies
+COPY requirements-test.txt .
+RUN pip install --no-cache-dir -r requirements-test.txt pytest-rich
+
+# Copy manifests and tests
+COPY deployment.yaml service.yaml hpa.yaml locustfile.py ./
+COPY tests/ ./tests/
+COPY pytest.ini ./
+
+CMD ["pytest", "-v", "--color=yes", "--tb=short", "-p", "no:cacheprovider"]

@@ -1,0 +1,4 @@
+# Test dependencies for Task2
+pytest>=8.0
+pyyaml>=6.0
+pytest-cov>=5.0
